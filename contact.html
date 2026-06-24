@@ -16,7 +16,7 @@
   <div class="navbar w-full max-w-7xl mx-auto px-5">
 
     <div class="navbar-start ">
-      <a class="btn btn-ghost text-xl font-bold">AGRI-HUB</a>
+      <a class="btn btn-ghost text-2xl font-bold">AGRI-HUB</a>
     </div>
     <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1 text-base">
@@ -28,7 +28,7 @@
       </ul>
     </div>
     <div class="navbar-end">
-      <a href="#" class="btn bg-green-500 text-white">
+      <a href="#" class=" px-5 py-2 rounded-md bg-green-500  text-white">
           Explore
       </a>
       <div class="dropdown relative">
@@ -63,14 +63,69 @@
 
 
 
-<!---------------------------------------------------------- Form-->
+<!---------------------------------------------------------- Section-->
 <section class="w-full bg-lime-100 py-15">
-  <div class="max-w-7xl mx-auto px-5">
+  <div class="max-w-7xl mx-auto px-5 flex gap-4 justify-center ">
+          <!---------------------------------------------------------- Direct contact -->
+    <div class="rounded-lg shadow-md p-6 bg-white w-full space-y-4">
+      <div>
+        <h4 class=" text-3xl font-semibold pb-2">Direct contact</h4>
+      </div>
+      <div class="flex flex-col gap-5">
+        <div class="flex flex-col gap-1">
+          <p class="text-xl font-semibold"> Phone Number</p>
+          <a href="tel:+880 915656565" class="text-gray-700 text-lg"><i class="fa-solid fa-phone" style="color: rgb(0, 219, 73);"></i> 
+            +880 915656565</a>
+        </div>
+        <div class="flex flex-col gap-1">
+          <p class="text-xl font-semibold">Email</p>
+          <a href="mailto:example@gmail.com" class="text-gray-700 text-lg"><i class="fa-solid fa-envelope" style="color: rgb(0, 219, 73);"></i>
+            example@gmail.com</a>
+        </div>
+        <div class="flex flex-col gap-1">
+          <p class="text-xl font-semibold">Address</p>
+          <p class="text-gray-700 text-lg"><i class="fa-solid fa-location-arrow" style="color: rgb(0, 219, 73);"></i>
+            Mirpur-1, Dhaka 1216, Bangladesh</p>
+        </div>
+        <div class="flex flex-col gap-1">
+          <p class="text-xl font-semibold">Office Time</p>
+          <p class="text-gray-700 text-lg"><i class="fa-solid fa-business-time" style="color: rgb(0, 219, 73);"></i>
+            9:00 AM - 05:00 PM</p>
+        </div>
+      </div>
+    </div>
 
+          <!---------------------------------------------------------- Form-->
+    <form action="" id="userForm" class="rounded-lg shadow-md p-6 bg-white flex flex-col gap-4 w-full ">
+      <div>
+        <h4 class=" text-3xl font-semibold pb-2">Massage us</h4>
+      </div>
+      <div class="flex flex-col gap-2">
+        <label for="userName">Name<span class="text-red-600">*</span></label>
+        <input type="text" placeholder="Jhon Dao" id="userName" class="p-3 rounded-md border-gray-300 ">
+      </div>
+      <div class="flex flex-col gap-2">
+        <label for="userEmail">Email<span class="text-red-600">*</span></label>
+        <input type="email" placeholder="example@gmail.com" id="userEmail" class="p-3 rounded-md border-gray-300 ">
+      </div>
+      <div class="flex flex-col gap-2">
+        <label for="userSubject">Subject<span class="text-red-600">*</span></label>
+        <input type="text" placeholder="For inquiries" id="userSubject" class="p-3 rounded-md border-gray-300 ">
+      </div>
+      <div class="flex flex-col gap-2">
+        <label for="userDocument">Document <span class="text-gray-500">(optional)</span> </label>
+        <input type="file" id="userDocument" class="p-3 rounded-md border-gray-300 bg-gray-200 cursor-pointer">
+      </div>
+      <div class="flex flex-col gap-2">
+        <label for="userMassage">Massage<span class="text-red-600">*</span></label>
+        <textarea id="userMassage" class="p-3 rounded-md border-gray-300 " placeholder="Type your massage..."></textarea>
+      </div>
+      <button type="button" onclick="formValid()" class="bg-green-600 text-white font-semibold py-3 rounded-lg cursor-pointer">Submit</button>
+      <p  id="userAlert"></p>
+    </form>
   </div>
 </section>
-<!---------------------------------------------------------- Form-->
-
+<!---------------------------------------------------------- Direct contact -->
 
 
 

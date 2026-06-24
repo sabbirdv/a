@@ -314,6 +314,8 @@ function guidesFilter() {
 
 runGuides(guides);
 
+
+
 function runCrops(data) {
     const cropsShow = document.getElementById("cropsShow");
     if (!cropsShow) return;
@@ -346,12 +348,17 @@ function cropsFilter() {
 runCrops(crops);
 
 
+
 const pestsShow = document.getElementById("pestsShow");
+
+if(pestsShow){
+
+
     const pestsDiv = pests.map((element) => {
         return `
         <div class="rounded-md overflow-hidden bg-white flex flex-col">
-            <div class="h-[50%] overflow-hidden">
-            <img src="image/crops-1.jpg" alt="" class="w-full object-cover">
+            <div class="aspect-400/300 overflow-hidden">
+            <img src="image/${element.image}" alt="" class="w-full h-full object-cover">
             </div>
             <div class=" flex flex-col p-4 gap-3 mt-auto">
                 <h4 class="text-lg font-semibold" >${element.title}</h4>
@@ -378,4 +385,37 @@ const pestsShow = document.getElementById("pestsShow");
             </div>
         </div>`
     }).join("");
+
     pestsShow.innerHTML = pestsDiv;
+}
+
+
+
+function formValid(){
+    const userName = document.getElementById("userName").value;
+    const userEmail = document.getElementById("userEmail").value;
+    const userSubject = document.getElementById("userSubject").value;
+    const userMassage = document.getElementById("userMassage").value;
+    const userDocument = document.getElementById("userDocument").value;
+    const userForm = document.getElementById("userForm");
+    const userAlert = document.getElementById("userAlert");
+
+    if(userName == "" || userName.length < 3 ){
+        userAlert.innerHTML = `Enter your Name!`
+        userAlert.classList = `text-red-500 text-center font-semibold`; 
+    }else if(userEmail =="" || userEmail.length < 6 || !userEmail.includes("@") || !userEmail.includes(".") ){
+        userAlert.innerHTML = `Enter your Email address!`
+        userAlert.classList = `text-red-500 text-center font-semibold`; 
+    }else if(userSubject =="" || userSubject.length == 0){
+        userAlert.innerHTML = `Enter the subject!`
+        userAlert.classList = `text-red-500 text-center font-semibold`; 
+    }else if(userMassage =="" || userMassage.length < 10 ){
+        userAlert.innerHTML = `Type your Massage!`
+        userAlert.classList = `text-red-500 text-center font-semibold`; 
+    }else{
+        userAlert.textContent = `Form submit successfuly.`
+        userAlert.classList = `text-green-600 text-center font-semibold`;
+        userForm.reset()
+    }
+    console.log(userDocument)
+}
