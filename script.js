@@ -90,7 +90,6 @@ let guides = [
         tips: "Start small with one field before converting entire farm Connect with local organic farming cooperatives for support"
     }
 ];
-
 let crops = [
     {
         id: 1,
